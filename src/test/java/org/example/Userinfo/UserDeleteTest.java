@@ -18,4 +18,12 @@ public class UserDeleteTest extends TestBase {
         response.then().statusCode(204);
         response.prettyPrint();
     }
+    @Test
+    public void getbackuserInfo() {
+        Response response=given()
+                .when()
+                .get("/users/2");
+        response.then().statusCode(200);
+        response.prettyPrint();
+    }
 }
